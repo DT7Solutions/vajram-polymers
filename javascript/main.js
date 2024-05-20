@@ -291,7 +291,7 @@
 
     var goTop = function () {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 800) {
+            if ($(this).scrollTop() > 100) {
                 $('.go-top').addClass('show');
             } else {
                 $('.go-top').removeClass('show');

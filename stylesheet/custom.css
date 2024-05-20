@@ -1,4 +1,5 @@
 
+/* HOME PAGE */
 body {
     font: 16px/30px "Rubik", sans-serif;
     background-color: #fff;
@@ -61,10 +62,14 @@ body {
     color: #ffffff;
 }
 .btn-top .btn-style-4 .btn-title{
-    color: #599b47;
+    background-color: #599b47;
     border: 1px solid #599b47;
     border-radius: 5px;
     width: 100%;
+}
+.search-btn .btn-style-4:hover .btn-title {
+  color: #599b47;
+  border:1px solid #599b47 !important;
 }
 .btn-style-4 .btn-title::before {
     background-color: #ffffff;
@@ -73,7 +78,7 @@ body {
 }
 .btn-style-4:hover .btn-title {
     color: #599b47;
-  }
+}
 .btn-style-two:hover .btn-title {
     color: #599b47 !important;
     border: 1px solid #599b47;
@@ -118,7 +123,6 @@ body {
 .icon-window{
     background-color: #599b47;
 }
-
 .bg-color-style3,
 .bg-color-style5 {
     background-color: #ddebda !important;
@@ -213,6 +217,83 @@ body {
     color: #599b47;
 }
 
+.webing-whatsapp-button.align_left {
+    left: 0px;
+}
+.webing-whatsapp-button {
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999;
+}
+.webing-whatsapp-button {
+    position: fixed;
+    bottom: 0px;
+    z-index: 9999;
+}
+.webing-whatsapp-button a {
+    display: inline-block;
+    transition: all .3s ease;
+    color: #ffffff;
+    padding: 5%;
+}
+.webing-whatsapp-button a img {
+    display: block;
+    width: 25%;
+    height: auto;
+}
+
+
+/* ABOUT PAGE */
+.page-title{
+    padding: 0%;
+    z-index: 0;
+}
+.page-title-inner{
+    background-image: url(../images/img/sub-hero-1920x500.png);
+}
+.overlay-page-tile {
+    background-color: #ddebda;
+    opacity: 0.7;
+}
+.page-title-content .blog-title{
+    color: #599b47 !important;
+}
+.bg-img-style2 {
+    background-color: #599b47;
+}
+.page-title-content .blog-title span,
+.hv-color-st1{
+    color: #599b47 !important;
+}
+.hv-color-st1:hover {
+    color: #ffffff !important;
+}
+.page-title-content .blog-title a::after {
+    background-color: #599b47;
+}
+.image-box-team .topbar-socials a,
+.image-box-team .topbar-socials .active,
+.image-box-team .topbar-socials a:hover {
+  background-color: #ddebda;
+}
+
+
+/* CONTACT PAGE */
+.questions-contact .bg-color {
+    background-color: #599b47 !important;
+}
+.content-form .title-section .sub-title {
+    color: #ffffff !important;
+}
+.questions-contact .themesflat-button-style3 span {
+    background-color: #599b47 !important;
+    color: #ffffff !important;
+}
+.questions-contact .btn-style-5:hover .btn-title{
+    color: #599b47 !important;
+}
+.contact-us-style li span i{
+    background-color: #599b47;
+}
+
 
 /* Responsive Modes */
 /* responsive code for Desktop */
@@ -237,6 +318,21 @@ body {
     .what-we-do-style1 .col-sm-4:last-child{
         margin-left: 25%;
     }
+
+    .page-title{
+        padding: 10% 0% !important;
+    }
+    .about-page{
+        margin-top: 15%;
+    }
+    .about-style .flat-tabs-about .menu-tab {
+		display: flex !important;
+		justify-content: space-evenly;
+	}
+    .about-style .col-md-12{
+        width: 100%;
+        margin: 2.5% 0%;
+    }
 }
 
 /* responsive code for mobile */
@@ -256,6 +352,9 @@ body {
     .about2 .about-us{
         margin-top: 0%;
     }
+    .carousel{
+		padding-top: 50px;
+	}
     .footer-links{
         margin: 0%;
         line-height: 40px;
@@ -264,6 +363,28 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .go-top.show{
+        right: 5%;
+        bottom: 5%;
+    }
+    .about-page{
+        margin-top: 15%;
+    }
+    .about-style .flat-tabs-about .menu-tab {
+		display: flex !important;
+		justify-content: space-evenly;
+	}
+    .about-style .col-md-12{
+        width: 100%;
+        margin: 2.5% 0%;
+    }
+    .about-style .btn-about{
+		bottom: -80px;
+	}
+    .flat-tabs-about .menu-tab-about li a {
+        padding: 15px 30px;
     }
 }
 
