@@ -200,10 +200,10 @@
                     loop:loops,
                     dots:dots,
                     nav: nav,
-                    navigation : true,
-                    pagination: true,
-                    autoplay: false,
-                    autoplayTimeout: 5000,
+                    navigation : false,
+                    pagination: false,
+                    autoplay: true,
+                    autoplayTimeout: 1000,
                     responsive: {
                         0:{
                             items:item3
