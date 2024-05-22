@@ -113,6 +113,9 @@ body {
 .flat-tabs-type4 .menu-tab li a {
     margin: 0px;
 }
+.flat-tabs-type4 .featured-post .title a:hover {
+    color: #ffffff;
+}
 .custom .tp-bullet:hover,
 .custom .tp-bullet.selected {
   background: #599b47;
@@ -147,6 +150,9 @@ body {
 .subscribe .box2-subscribe {
     float: right;
     width: 50%;
+}
+.what-we-do-style .image-box .title-imagebox a:hover{
+    color: #599b47;
 }
 .testimonials-style .icon-list .icon-material::before,
 .testimonials-style .icon-list .icon-heart::before,
@@ -218,6 +224,9 @@ body {
 }
 #botom {
     height: auto !important;
+}
+#botom a:hover {
+    color: #599b47;
 }
 .footer-links{
     margin: 0%;
@@ -332,6 +341,10 @@ body {
     font-size: 20px !important;
     top: 15%;
     left: 15%;
+}
+.tf-list-service .list-window a:hover,
+.tf-list-service .list-service a:hover{
+    color: #599b47;
 }
 
 /* CONTACT PAGE */
