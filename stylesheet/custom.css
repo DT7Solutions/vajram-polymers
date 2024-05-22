@@ -5,6 +5,7 @@ body {
     background-color: #fff;
     color: #434e6e;
 }
+
 .overlay-ft {
     background-color: #434e6e;
     width: 100%;
@@ -446,6 +447,13 @@ body {
 
 
 /* RESPOVSIVE VIEW */
+@media only screen and (min-width: 1300px) {
+    body {
+        font: 19px/30px "Rubik", sans-serif !important;
+        background-color: #fff;
+        color: #434e6e;
+    }
+}
 /* responsive code for Desktop */
 @media only screen and (min-width: 1020px) {
     .tf-blog-slider .align-items-center {
