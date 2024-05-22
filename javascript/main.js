@@ -203,7 +203,7 @@
                     navigation : false,
                     pagination: false,
                     autoplay: true,
-                    autoplayTimeout: 1000,
+                    autoplayTimeout: 5000,
                     responsive: {
                         0:{
                             items:item3
