@@ -542,3 +542,63 @@
    	});
 
 })(jQuery);
+
+
+
+
+
+var currentPage = 0;
+
+$('.book')
+.on('click', '.active', nextPage)
+.on('click', '.flipped', prevPage);
+
+$('.book').hammer().on("swipeleft", nextPage);
+$('.book').hammer().on("swiperight", prevPage);
+
+function prevPage() {
+$('.flipped')
+    .last()
+    .removeClass('flipped')
+    .addClass('active')
+    .siblings('.page')
+    .removeClass('active')
+$('.scene')
+    .addClass('right-set').css("left", "0px");
+
+$('#scene').animate({
+    'margin-left': '50%'
+});
+
+if ($('section.page:nth-child(1)').hasClass('active') == true) {
+    $('#scene').animate({
+        'left': '0px',
+        'margin-left': '35%'
+    });
+}
+
+
+}
+
+function nextPage() {
+    $('.active')
+        .removeClass('active')
+        .addClass('flipped')
+        .next('.page')
+        .addClass('active')
+        .siblings()
+    $('.scene')
+        .addClass('left-set').css("left", "0px");
+
+$('#scene').animate({
+    'margin-left': '50%'
+});
+
+if ($('.right-set').hasClass('flipped') == true) {
+    $('#scene').animate({
+        'left': '0px',
+        'margin-left': '65%'
+    });
+}
+
+}
