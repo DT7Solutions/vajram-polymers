@@ -372,9 +372,130 @@ body {
     line-height: 62px;
 }
 
+/* BROCHURES-CATALOGUE PAGE*/
+/* .tf-company-brochure .scene {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+}
+.tf-company-brochure .book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.tf-company-brochure .page {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 1.5s -webkit-transform;
+    transition: 1.5s transform;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;  
+    -webkit-transform-origin: left center;  
+    -ms-transform-origin: left center;  
+    transform-origin: left center;
+}
+.tf-company-brochure .front,
+.tf-company-brochure .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.tf-company-brochure .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.tf-company-brochure .page.active {
+    z-index: 1;
+}
+.tf-company-brochure .page.flipped {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+.tf-company-brochure .page.flipped:last-of-type {
+    z-index: 1;
+} */
 
 
+.tf-company-brochure .scene {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 
+.tf-company-brochure .book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.tf-company-brochure .page {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 1.5s -webkit-transform;
+    transition: 1.5s transform;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;  
+    -webkit-transform-origin: left center;  
+    -ms-transform-origin: left center;  
+    transform-origin: left center;
+}
+
+.tf-company-brochure .front,
+.tf-company-brochure .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.tf-company-brochure .back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.tf-company-brochure .page.active {
+    z-index: 1;
+}
+
+.tf-company-brochure .page.flipped {
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.tf-company-brochure .page.flipped:last-of-type {
+    z-index: 1;
+}
 
 
 /* RESPOVSIVE VIEW */
@@ -419,6 +540,10 @@ body {
     .about-style .col-md-12{
         width: 100%;
         margin: 2.5% 0%;
+    }
+    .tf-company-brochure .scene {
+        width: 450px;
+        height: 450px;
     }
 }
 
@@ -475,6 +600,11 @@ body {
     .flat-tabs .menu-tab-style li a {
         padding: 10px 14px !important;
     }
+    .tf-company-brochure .scene {
+        width: 350px;
+        height: 350px;
+    }
+    
 }
 
 
@@ -487,72 +617,3 @@ body {
 
 
 
-
-
-
-
-.scene {
-    width: 500px;
-    height: 500px;
-    margin: auto;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    left:0;
-    right:0;
-    top:0;
-    bottom:0;
-  
-  }
-  .book {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  }
-  .page {
-    cursor: pointer;
-    position: absolute;
-    color: black;
-    width: 100%;
-    height: 100%;
-  
-    -webkit-transition: 1.5s -webkit-transform;
-  
-    transition: 1.5s transform;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;  
-    -webkit-transform-origin: left center;  
-    -ms-transform-origin: left center;  
-    transform-origin: left center;
-  }
-  .front,
-  .back {
-    position: absolute;
-    
-    width: 100%;
-    height: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  
-    -webkit-backface-visibility: hidden;
-  
-    backface-visibility: hidden;
-  }
-  .back {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-  
-  .page.active {
-    z-index: 1;
-  }
-  .page.flipped {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-  }
-  .page.flipped:last-of-type {
-    z-index: 1;
-  }
-  
