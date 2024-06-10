@@ -309,7 +309,7 @@ body {
     color: #599b47 !important;
 }
 
-/* WINDOWS PAGE & DOORS PAGE & SERVICE PAGE */
+/* WINDOWS PAGE & DOORS PAGE & PARTITIONS PAGE */
 .icon-box-dor li {
     height: 80px;
     line-height: 77px;
@@ -350,6 +350,16 @@ body {
 .tf-list-service .list-service a:hover{
     color: #599b47;
 }
+.windows .flat-tabs .menu-tab-style li a {
+    padding: 25px 50px 20px 50px !important;
+}
+.doors .flat-tabs .menu-tab-style li a {
+    padding: 25px 100px 20px 100px !important;
+}
+.partitions .flat-tabs .menu-tab-style li a {
+    padding: 25px 100px 20px 100px !important;
+}
+
 
 /* CONTACT PAGE */
 .questions-contact .bg-color {
