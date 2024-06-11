@@ -366,6 +366,7 @@ body {
     display: flex !important;
     flex-wrap: wrap;
     align-items: center !important;
+    justify-content: center;
     margin-bottom: 2.5%;
 }
 .content-inner .col-tab .row strong{
