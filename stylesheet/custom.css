@@ -359,7 +359,21 @@ body {
 .partitions .flat-tabs .menu-tab-style li a {
     padding: 25px 100px 20px 100px !important;
 }
-
+.tabs-garallry .flat-tabs .menu-tab li{
+    margin-bottom: 2.5%;
+}
+.content-inner .col-tab .row {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-items: center !important;
+    margin-bottom: 2.5%;
+}
+.content-inner .col-tab .row strong{
+    color: #599b47;
+}
+.content-inner .image-profolio h4{
+    margin-top: 2.5%;
+}
 
 /* CONTACT PAGE */
 .questions-contact .bg-color {
@@ -577,7 +591,7 @@ body {
     .flat-tabs-about .menu-tab-about li a {
         padding: 15px 30px;
     }
-    .flat-tabs .menu-tab-style li a {
+    .windows .flat-tabs .menu-tab-style li a {
         padding: 10px 14px !important;
     }
     .tf-company-brochure .scene {
