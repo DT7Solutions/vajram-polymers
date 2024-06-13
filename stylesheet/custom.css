@@ -1,10 +1,379 @@
 
-/* HOME PAGE */
+/* Google Fonts CDN Import for Poppins and Roboto Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* style.css file font-family change */
 body {
-    font: 16px/30px "Rubik", sans-serif;
+    font-family: "Poppins", "Roboto", sans-serif !important;
     background-color: #fff;
     color: #434e6e;
 }
+::-webkit-input-placeholder {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+    font-weight: bold;
+}
+.btn-style-one .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-two .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-3 .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-4 .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-5 .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-6 .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.btn-style-7 .btn-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tftitle-style4,
+.tftitle-style3,
+.tftitle-style2{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.top-content a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#mainnav ul > li > a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#mainnav ul li li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#mainnav-mobi ul > li > a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.page-title-content .blog-title span {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.post-calendar .entry-calendar {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog .post-meta li {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog .post-meta li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog .title a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog .flat-read-more a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tag-socical .text1 span {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.themesflat-pagination .page-prev-next > li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.themesflat-pagination a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.widget-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.widget.widget_lastest .text h5 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.text-body span {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.text-number span {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#footer .form-email button {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.form-email input {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#footer p {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#footer .subscribe p {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#footer .title-ft {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#footer .title-ft2 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.footer-contact .text a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.link ul li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+#botom a , #botom span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-list .comment-meta .comment-author {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-list .comment-reply a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-list.style-2 .comment-meta .comment-position {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-respond select {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-respond select option {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-respond .form-submit input {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-respond input::placeholder {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.comment-respond textarea::placeholder {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+caption,
+canvas,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+form,
+footer,
+header,
+hgroup,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+tt,
+table,
+tbody,
+textarea,
+tfoot,
+thead,
+time,
+tr,
+th,
+td,
+u,
+ul,
+var,
+video {
+  font-family: inherit;
+}
+
+/* shortcodes.css file font-family change */
+.flat-slider h1 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.flat-slider h5 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.iconlist-about li span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.title-section .sub-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.title-section .flat-title {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.flat-title-style2 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box li a{  
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box li span{  
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.what-we-do-content .image-box h4 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.what-we-do-style .image-box .title-imagebox a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.what-we-do-style .image-box .number{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box-dor li span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.subscribe .form-email input::placeholder {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.testimonials-style .box .number {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.testimonials-style .box .number-end {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.box .text{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-box span {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.boxtestimonial .image-box {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.meta-blog-style2 .entry-calendar a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog-style2 .title-blog a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.content-blog-style2 .date{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tf-coutor .item-firt,
+.tf-coutor .box .coutor-box .number{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tf-coutor .box .coutor-box p{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.questions-style .form-questions .comment-respond .form-submit input {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.questions-style #commentform input,
+.questions-style #commentform textarea{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.partners-style2 .owl-carousel .content-title span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.partners-style2 .owl-carousel .content-title a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.footer-widget .btn-style-4 .btn-title{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.case-tab .featured-post .title a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.iconbox-features .iconbox-content li span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.select-product .lable{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.select-product select{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.flat-carousel-box-style2 .boxtestimonial .image-box .content-box span{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.list-window2 .flat-tabs .menu-tab li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.widget-title-style2,
+.sidebar-style2 .widget .widget-title h4{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.image-box-style3 .btn-dowload a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box-details p{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tf-tabs-style .menu-tab li a {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tabs-case-study .profolio-show .content-title h4 {
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.tabs-case-study .image-profolio .profolio-show .tftitle-style2{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box-infor li .number{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box-infor .tf-icon-box a{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+.icon-box-infor .tf-icon-box p{
+    font-family: "Poppins", "Roboto", sans-serif !important;
+}
+
+
+
+
+
+
 
 .overlay-ft {
     background-color: #434e6e;
@@ -12,7 +381,11 @@ body {
     height: 100%;
 } 
 .header-style2 .logo{
-    width: 30%;
+    width: 20%;
+}
+.header-style2 .content-menu{
+    width: 100%;
+    height: 100px;
 }
 #mainnav-mobi .current-menu-item > a, 
 #mainnav-mobi ul .current-menu > a, 
@@ -24,6 +397,9 @@ body {
 }
 #mainnav > .menustyle2 > li:before{
   background: #8ab97e !important;
+}
+.top-bar-style2 .container-fluid{
+    padding: 0% 2.5%;
 }
 .top-bar-style2 .top-content a, 
 .top-bar-style2 .topbar-socials a,
@@ -113,6 +489,7 @@ body {
 }
 .flat-tabs-type4 .menu-tab{
     width: 55%;
+    height: 60px;
 }
 .flat-tabs-type4 .menu-tab li a {
     margin: 0px;
@@ -149,11 +526,17 @@ body {
 }
 .subscribe .box1-subscribe {
     float: left;
-    width: 45%;
+    width: 70%;
 }
 .subscribe .box2-subscribe {
     float: right;
-    width: 50%;
+    width: 30%;
+}
+.subscribe .box2-subscribe .form-email button {
+    top: 110% !important;
+    right: 0%;
+    width: 100%;
+    line-height: 62px;
 }
 .what-we-do-style .image-box .title-imagebox a:hover{
     color: #599b47;
@@ -243,6 +626,10 @@ body {
 .go-top {
     background-color: #599b47;
     border-radius: 25%;
+    position: fixed !important;
+    bottom: 5%;
+    right: 2.5%;
+    scale: 1.2;
 }
 .go-top:hover {
     background-color: #ffffff;
@@ -252,14 +639,18 @@ body {
 .go-top:hover i {
     color: #599b47;
 }
-
+.go-top.show {
+    right: 2.5%;
+    bottom: 5%;
+}
 .webing-whatsapp-button {
     position:fixed;
-    bottom: 0%;
-    left: 0%;
+    bottom: 2.5%;
+    left: 1%;
     z-index: 9999;
 }
 .webing-whatsapp-button a {
+    max-width: 75px;
     display: block;
     transition: all .3s ease;
     color: #ffffff;
@@ -267,7 +658,7 @@ body {
 }
 .webing-whatsapp-button a img {
     display: block;
-    width: 25%;
+    width: 100%;
     height: auto;
 }
 
@@ -410,9 +801,6 @@ body {
     width: 100%;
     border: 2px solid #599b47;
 }
-.subscribe .box2-subscribe .form-email button {
-    line-height: 62px;
-}
 
 /* BROCHURES-CATALOGUE PAGE*/
 .tf-company-brochure .scene {
@@ -477,7 +865,7 @@ body {
 /* RESPOVSIVE VIEW */
 @media only screen and (min-width: 1300px) {
     body {
-        font: 19px/30px "Rubik", sans-serif !important;
+        /* font: 19px/30px "Rubik", sans-serif !important; */
         background-color: #fff;
         color: #434e6e;
     }
@@ -540,6 +928,14 @@ body {
     .questions-location{
         margin-top: 0px;
     }
+    .flat-tabs-type4 .menu-tab{
+        width: 90%;
+        height: 60px;
+    }
+    .tf-newslatter .subscribe{
+		padding: 30px 30px 350px 30px;
+		z-index: 99;
+	}
 }
 
 /* responsive code for mobile */
@@ -589,6 +985,10 @@ body {
     .about-style .btn-about{
 		bottom: -80px;
 	}
+    .flat-tabs-type4 .menu-tab{
+        width: 90%;
+        height: 200px;
+    }
     .flat-tabs-about .menu-tab-about li a {
         padding: 15px 30px;
     }
