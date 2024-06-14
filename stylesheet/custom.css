@@ -600,6 +600,9 @@ video {
 .footer-contact .phone .icon-phone::before {
     color: #599b47;
 }
+.footer-contact .text a:hover {
+    color: #599b47;
+}
 .link ul li a:hover {
     color: #599b47;
 }
