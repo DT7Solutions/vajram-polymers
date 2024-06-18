@@ -437,7 +437,6 @@
                     subscribeButton: $('#subscribe-button'),
                     subscribeMsg: $('#subscribe-msg'),
                     subscribeContent: $("#subscribe-content"),
-                    dataMailchimp: $('#subscribe-form').attr('data-mailchimp'),
                     success_message: '<div class="notification_ok">Thank you for joining our mailing list! Please check your email for a confirmation link.</div>',
                     failure_message: '<div class="notification_error">Error! <strong>There was a problem processing your submission.</strong></div>',
                     noticeError: '<div class="notification_error">{msg}</div>',
@@ -445,58 +444,37 @@
                 },
                 eventLoad: function () {
                     var objUse = ajaxSubscribe.obj;
-                    $(objUse.subscribeButton).on('click', function () {
+                    $(objUse.subscribeButton).on('click', function (e) {
+                        e.preventDefault();
                         if (window.ajaxCalling) return;
-                        ajaxSubscribe.ajaxCall();
-                    });
-                },
-                ajaxCall: function () {
-                    window.ajaxCalling = true;
-                    var objUse = ajaxSubscribe.obj;
-                    var messageDiv = objUse.subscribeMsg.html('').hide();
-                    var formData = {
-                        subscribeEmail: objUse.subscribeEmail.val()
-                    };
-                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_SUBSCRIBE_TEMPLATE_ID', formData)
-                        .then(function (response) {
-                            if (response.status === 200) {
-                                objUse.subscribeContent.fadeOut(500, function () {
-                                    messageDiv.html(objUse.success_message).fadeIn(500);
-                                });
-                            } else {
-                                messageDiv.html(objUse.failure_message).fadeIn(500);
-                            }
-                        }, function (error) {
-                            var errorMsg;
-                            switch (error.text) {
-                                case "email-required":
-                                    errorMsg = 'Error! <strong>Email is required.</strong>';
-                                    break;
-                                case "email-err":
-                                    errorMsg = 'Error! <strong>Email invalid.</strong>';
-                                    break;
-                                case "duplicate":
-                                    errorMsg = 'Error! <strong>Email is duplicate.</strong>';
-                                    break;
-                                case "filewrite":
-                                    errorMsg = 'Error! <strong>Mail list file is open.</strong>';
-                                    break;
-                                case "undefined":
-                                    errorMsg = 'Error! <strong>undefined error.</strong>';
-                                    break;
-                                default:
-                                    errorMsg = 'Error! <strong>API error.</strong>';
-                            }
-                            messageDiv.html(objUse.noticeError.replace('{msg}', errorMsg)).fadeIn(500);
-                        })
-                        .finally(function () {
-                            window.ajaxCalling = false;
+                        // Validate email format
+                        var email = objUse.subscribeEmail.val().trim();
+                        if (!isValidEmail(email)) {
+                            var errorMsg = 'Error! <strong>Invalid email format.</strong>';
+                            objUse.subscribeMsg.html(objUse.noticeError.replace('{msg}', errorMsg)).fadeIn(500);
+                            return;
+                        }
+                        // If email is valid, print form data in console
+                        var formData = {
+                            subscribeEmail: email
+                        };
+                        console.log('Subscribe form data:', formData);
+                        // Simulate success message (since we're not using EmailJS for this example)
+                        objUse.subscribeContent.fadeOut(500, function () {
+                            objUse.subscribeMsg.html(objUse.success_message).fadeIn(500);
                         });
+                    });
                 }
             };
             ajaxSubscribe.eventLoad();
         }
     };
+    // Function to validate email format
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
     $(document).ready(function () {
         ajaxContactForm();
         ajaxSubscribe();
