@@ -34,7 +34,7 @@ const slider = {
         const timeline = gsap.timeline();
         timeline
             .to(sliderItem, 0.5, {
-                left: "100vw",
+                left: "50%",
                 delay: 0.5,
                 scale: 0.3,
                 opacity: 0

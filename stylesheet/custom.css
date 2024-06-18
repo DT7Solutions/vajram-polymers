@@ -387,21 +387,13 @@ video {
     display: none;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
     background-position: center center;
     transition: all 1s ease-in-out;
 }
 .slider__item.active {
     display: flex;
-}
-.slider__item:nth-child(1) {
-    background: linear-gradient(rgba(45, 172, 189, 0.5), rgba(0, 0, 0, 0.25));
-}
-.slider__item:nth-child(2) {
-    background: linear-gradient(rgba(181, 52, 34, 0.5), rgba(0, 0, 0, 0.25));
-}
-.slider__item:nth-child(3) {
-    background: linear-gradient(rgba(81, 46, 120, 0.5), rgba(0, 0, 0, 0.25));
 }
 .slider__text {
     text-align: center;
@@ -410,54 +402,22 @@ video {
     width: 75%;
 }
 .slider__text .subtitle {
-    font-size: clamp(20px, 21px, 22px);
+    font-size: 18px;
+    line-height: 20px;
     font-weight: 500;
-    margin-bottom: 12px;
+    margin: 1% 0%;
 }
 .slider__text .title {
-    font-size: clamp(32px, 42px, 50px);
+    font-size: 48px;
+    line-height: 50px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 2.5% 0%;
 }
 .slider__text .description {
-    font-size: clamp(16px, 17px, 18px);
-    line-height: 1.5;
-    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 1% 0%;
 }
-.slider__arrows {
-    position: absolute;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.slider__arrows--left,
-.slider__arrows--right {
-    border: none;
-    background-color: transparent;
-    color: #fff;
-    text-shadow: 1px 1px #666;
-    font-size: 32px;
-    padding: 0 5%;
-    cursor: pointer;
-    transition: all 0.25s, opacity 0.25s;
-}
-.slider__arrows--left:hover,
-.slider__arrows--right:hover {
-    opacity: 0.6;
-    transform: translateX(5px);
-}
-.slider__arrows--left:hover {
-    transform: translateX(-5px);
-}
-.slider__arrows--right:focus,
-.slider__arrows--left:focus {
-    outline: thin dashed rgba(255, 255, 255, 0.651);
-    outline-offset: -4px;
-}
-
 
 .overlay-ft {
     background-color: #434e6e;
@@ -466,10 +426,11 @@ video {
 } 
 .header-style2 .logo{
     width: 20%;
+    padding: 0.5% 0;
 }
 .header-style2 .content-menu{
     width: 100%;
-    height: 100px;
+    height: 75px;
 }
 #mainnav-mobi .current-menu-item > a, 
 #mainnav-mobi ul .current-menu > a, 
@@ -956,12 +917,51 @@ video {
         background-color: #fff;
         color: #434e6e;
     }
+    .slider {
+        height: 700px;
+    }
+    .slider__text {
+        width: 100%;
+        padding: 0 10%;
+    }
+    .slider__text .subtitle {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .slider__text .title {
+        font-size: 72px;
+        line-height: 74px;
+    }
+    .slider__text .description {
+        font-size: 28px;
+        line-height: 30px;
+    }
     .footer-h2 {
 		margin-top: -15% !important;
 	}
 }
 /* responsive code for Desktop */
 @media only screen and (min-width: 1020px) {
+    .slider {
+        height: 650px;
+    }
+    .slider__text .subtitle {
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 500;
+        margin: 1% 0%;
+    }
+    .slider__text .title {
+        font-size: 48px;
+        line-height: 50px;
+        font-weight: 700;
+        margin: 2.5% 0%;
+    }
+    .slider__text .description {
+        font-size: 18px;
+        line-height: 20px;
+        margin: 1% 0%;
+    }
     .tf-blog-slider .align-items-center {
         display: flex;
         align-items: center;
@@ -975,6 +975,25 @@ video {
 }
 /* responsive code for tablet */
 @media only screen and (max-width: 992px) {
+    .slider {
+        height: 600px;
+    }
+    .slider__text {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .slider__text .subtitle {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .slider__text .title {
+        font-size: 50px;
+        line-height: 52px;
+    }
+    .slider__text .description {
+        font-size: 20px;
+        line-height: 22px;
+    }
 	.iconlist-about li{
 		margin-bottom: 1% !important;
 	}
@@ -1027,6 +1046,22 @@ video {
 
 /* responsive code for mobile */
 @media only screen and (max-width: 576px) {
+    .slider__text {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .slider__text .subtitle {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .slider__text .title {
+        font-size: 42px;
+        line-height: 44px;
+    }
+    .slider__text .description {
+        font-size: 16px;
+        line-height: 18px;
+    }
     .what-we-do-style1 .col-sm-4{
 		width: 100% !important;
 	}
