@@ -1,3 +1,77 @@
+
+
+const sliderItems = document.querySelectorAll(".slider__item");
+const slider = {
+    currentItem: 0,
+    intervalTime: 8000,
+    autoPlayInterval: null,
+    init: function() {
+        this.in(this.currentItem);
+        this.startAutoPlay();
+    },
+    in: function(index) {
+        const sliderItem = sliderItems[index];
+        const texts = sliderItem.querySelectorAll("p");
+        gsap.set(sliderItem, { scale: 0 });
+        gsap.set(sliderItem, { left: "-50%" });
+        const timeline = gsap.timeline();
+        timeline
+            .to(sliderItem, 0.5, { left: 0 })
+            .to(sliderItem, 0.5, { scale: 1 })
+            .from(texts, 1, {
+                autoAlpha: 0,
+                ease: Back.easeOut,
+                stagger: {
+                    y: 300,
+                    each: 0.3
+                }
+            });
+        sliderItem.classList.add("active");
+    },
+    out: function(index, nextIndex) {
+        const sliderItem = sliderItems[index];
+        const texts = sliderItem.querySelectorAll("p");
+        const timeline = gsap.timeline();
+        timeline
+            .to(sliderItem, 0.5, {
+                left: "100vw",
+                delay: 0.5,
+                scale: 0.3,
+                opacity: 0
+            })
+            .to(texts, 1, {
+                autoAlpha: 0,
+                ease: Back.easeIn,
+                stagger: {
+                    y: -300,
+                    each: 0.3
+                }
+            })
+            .call(function() {
+                sliderItem.classList.remove("active");
+                sliderItems[nextIndex].classList.add("active");
+            })
+            .set([texts, sliderItem], { clearProps: "all" });
+    },
+    next: function() {
+        const next =
+            this.currentItem !== sliderItems.length - 1
+                ? this.currentItem + 1
+                : 0;
+        this.out(this.currentItem, next);
+        this.currentItem = next;
+    },
+    startAutoPlay: function() {
+        this.autoPlayInterval = setInterval(() => {
+            this.next();
+        }, this.intervalTime);
+    }
+};
+slider.init();
+
+
+
+
 // Revolution Slider
 var RevSlider = function() {
     "use strict";

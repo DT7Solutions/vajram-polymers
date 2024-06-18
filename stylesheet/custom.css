@@ -370,9 +370,93 @@ video {
 }
 
 
-
-
-
+.slider {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../images/Slider/hero-slider-1920x755.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.slider__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    transition: all 1s ease-in-out;
+}
+.slider__item.active {
+    display: flex;
+}
+.slider__item:nth-child(1) {
+    background: linear-gradient(rgba(45, 172, 189, 0.5), rgba(0, 0, 0, 0.25));
+}
+.slider__item:nth-child(2) {
+    background: linear-gradient(rgba(181, 52, 34, 0.5), rgba(0, 0, 0, 0.25));
+}
+.slider__item:nth-child(3) {
+    background: linear-gradient(rgba(81, 46, 120, 0.5), rgba(0, 0, 0, 0.25));
+}
+.slider__text {
+    text-align: center;
+    color: #fff;
+    padding: 0 7.5%;
+    width: 75%;
+}
+.slider__text .subtitle {
+    font-size: clamp(20px, 21px, 22px);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.slider__text .title {
+    font-size: clamp(32px, 42px, 50px);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.slider__text .description {
+    font-size: clamp(16px, 17px, 18px);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+.slider__arrows {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider__arrows--left,
+.slider__arrows--right {
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    text-shadow: 1px 1px #666;
+    font-size: 32px;
+    padding: 0 5%;
+    cursor: pointer;
+    transition: all 0.25s, opacity 0.25s;
+}
+.slider__arrows--left:hover,
+.slider__arrows--right:hover {
+    opacity: 0.6;
+    transform: translateX(5px);
+}
+.slider__arrows--left:hover {
+    transform: translateX(-5px);
+}
+.slider__arrows--right:focus,
+.slider__arrows--left:focus {
+    outline: thin dashed rgba(255, 255, 255, 0.651);
+    outline-offset: -4px;
+}
 
 
 .overlay-ft {
