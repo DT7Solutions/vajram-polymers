@@ -313,11 +313,13 @@
                             </div>
                         </div><!-- box1-subscribe -->
                         <div class="box2-subscribe no-padding-left">
-                            <form action="#" class="form-email" id="formsubscribe">
-                                <input type="email" id="inpsub" class="email-here" placeholder="Enter your email" required/>
-                                <button type="submit" class="themesflat-button-style2 btn-style-6" >
+                            <!-- Subscribe Form -->
+                            <form id="subscribe-form" class="form-email subscribe-form">
+                                <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Your Email" required />
+                                <button type="submit" id="subscribe-button" class="themesflat-button-style2 btn-style-6">
                                     <span class="btn-title">Subscribe</span>
                                 </button>
+                                <div id="subscribe-msg"></div>
                             </form>
                         </div>
                     </div>
@@ -449,13 +451,13 @@
                                 <div class="title-ft">
                                     Newsletter
                                 </div>
-                                <form action="#" class="form-email">
-                                    <input type="email" class="email-here" placeholder="Email" required/>
-                                    <button class="font-style border-corner themesflat-button-style2 btn-style-4">
-                                        <span class="btn-title">
-                                            Subscribe
-                                        </span>
+                                <!-- Subscribe Form -->
+                                <form id="subscribe-form" class="form-email subscribe-form">
+                                    <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Your Email" required />
+                                    <button type="submit" id="subscribe-button" class="themesflat-button-style2 btn-style-4">
+                                        <span class="btn-title">Subscribe</span>
                                     </button>
+                                    <div id="subscribe-msg"></div>
                                 </form>
                                 <p>
                                     Get the latest updates on UPVC solutions. Unsubscribe anytime.
