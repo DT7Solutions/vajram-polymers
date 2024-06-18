@@ -832,11 +832,13 @@
                         </div>
                     </div><!-- box1-subscribe -->
                     <div class="box2-subscribe no-padding-left">
-                        <form action="#" class="form-email" id="formsubscribe">
-                            <input type="email" id="inpsub" class="email-here" placeholder="Enter your email" required/>
-                            <button type="submit" class="themesflat-button-style2 btn-style-6" >
+                        <!-- Subscribe Form -->
+                        <form id="subscribe-form" class="form-email subscribe-form">
+                            <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Your Email" required />
+                            <button type="submit" id="subscribe-button" class="themesflat-button-style2 btn-style-6">
                                 <span class="btn-title">Subscribe</span>
                             </button>
+                            <div id="subscribe-msg"></div>
                         </form>
                     </div>
                 </div>
@@ -1053,37 +1055,37 @@
                     <!-- form-questions -->
                     <div class="form-questions boxshadow bg-white wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div id="respond" class="comment-respond">
-                            <form action="#" method="post" id="commentform" class="commentform">
+                            <!-- Contact Form -->
+                            <form id="commentform" class="commentform" novalidate="novalidate">
                                 <div class="text-wrap clearfix">
                                     <fieldset class="name-wrap">
-                                        <input type="text" id="author" class="tb-my-input" name="author" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required/>
+                                        <input type="text" id="author" class="tb-my-input" name="author" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required="" />
                                     </fieldset>
                                     <fieldset class="phone-wrap">
-                                        <input type="number" id="phone" class="tb-my-input" name="phone" tabindex="2" placeholder="Phone Number" value="" aria-required="true" required/>
+                                        <input type="number" id="phone" class="tb-my-input" name="phone" tabindex="2" placeholder="Phone Number" required="" value="" aria-required="true" />
                                     </fieldset>
                                     <fieldset class="mail-wrap">
-                                        <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email Address" value="" size="32" aria-required="true" required/>
+                                        <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email Address" value="" size="32" aria-required="true" required="" />
                                     </fieldset>
-
                                     <fieldset class="select-wrap">
                                         <div class="select">
-                                            <select>
+                                            <select id="services" name="services">
                                                 <option value="services">Choose services</option>
-                                                <option value="services1">UPVC Windows</option>
-                                                <option value="services2">UPVC Doors</option>
-                                                <option value="services3">UPVC Partitions</option>
-                                                <option value="services4">Product Inquiry</option>
-                                                <option value="services5">Technical Support</option>
+                                                <option value="UPVC Windows">UPVC Windows</option>
+                                                <option value="UPVC Doors">UPVC Doors</option>
+                                                <option value="UPVC Partitions">UPVC Partitions</option>
+                                                <option value="Product Inquiry">Product Inquiry</option>
+                                                <option value="Technical Support">Technical Support</option>
                                             </select>
                                         </div>
                                     </fieldset>
                                 </div>
                                 <fieldset class="message-wrap">
-                                    <textarea id="comment-message" name="comment" rows="8" tabindex="4" placeholder="Your Message" aria-required="true" required></textarea>
+                                    <textarea id="comment-message" name="comment-message" rows="8" tabindex="5" placeholder="Your Message" required></textarea>
                                 </fieldset>
                                 <p class="form-submit">
-                                    <button type="submit" class="themesflat-button-style3 btn-style-5 no-boder">
-                                        <span class="btn-title">Send Message</span>
+                                    <button type="submit" name="submit" id="comment-reply" class="themesflat-button-style3 button btn-style-5 no-boder">
+                                        <span class="btn-title">Send message</span>
                                     </button>
                                 </p>
                             </form>
@@ -1221,13 +1223,13 @@
                                 <div class="title-ft">
                                     Newsletter
                                 </div>
-                                <form action="#" class="form-email">
-                                    <input type="email" class="email-here" placeholder="Email" required/>
-                                    <button class="font-style border-corner themesflat-button-style2 btn-style-4">
-                                        <span class="btn-title">
-                                            Subscribe
-                                        </span>
+                                <!-- Subscribe Form -->
+                                <form id="subscribe-form" class="form-email subscribe-form">
+                                    <input type="email" id="subscribe-email" name="subscribe-email" placeholder="Your Email" required />
+                                    <button type="submit" id="subscribe-button" class="themesflat-button-style2 btn-style-4">
+                                        <span class="btn-title">Subscribe</span>
                                     </button>
+                                    <div id="subscribe-msg"></div>
                                 </form>
                                 <p>
                                     Get the latest updates on UPVC solutions. Unsubscribe anytime.
@@ -1295,5 +1297,13 @@
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js"></script>
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
+    <!-- Email JS Contact Form CDN Link-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // emailjs.init("Account Public Key");
+            emailjs.init("");
+        })();
+    </script>
 </body>
 </html>

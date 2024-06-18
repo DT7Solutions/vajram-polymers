@@ -258,26 +258,27 @@
                     </div>
                     <div class="form-questions boxshadow bg-white wow fadeInRight animated" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div id="respond" class="comment-respond">
-                            <form action="contact/contact-process.php" method="post" id="commentform" novalidate="novalidate" class="commentform" accept-charset="utf-8">
+                            <!-- Contact Form -->
+                            <form id="commentform" class="commentform" novalidate="novalidate">
                                 <div class="text-wrap clearfix">
                                     <fieldset class="name-wrap">
-                                        <input type="text"  id="author" class="tb-my-input" name="author" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required="" type="text" />
+                                        <input type="text" id="author" class="tb-my-input" name="author" tabindex="1" placeholder="Full Name" value="" size="32" aria-required="true" required="" />
                                     </fieldset>
                                     <fieldset class="phone-wrap">
-                                        <input type="number" id="phone" class="tb-my-input" name="phone" tabindex="2" placeholder="Phone Number" required="" type="email" value="" aria-required="true" />
+                                        <input type="number" id="phone" class="tb-my-input" name="phone" tabindex="2" placeholder="Phone Number" required="" value="" aria-required="true" />
                                     </fieldset>
                                     <fieldset class="mail-wrap">
-                                        <input type="email" id="email"  class="tb-my-input"  name="email" tabindex="2" placeholder="Email Address" value="" size="32"  aria-required="true" required=""/>
+                                        <input type="email" id="email" class="tb-my-input" name="email" tabindex="2" placeholder="Email Address" value="" size="32" aria-required="true" required="" />
                                     </fieldset>
                                     <fieldset class="select-wrap">
                                         <div class="select">
-                                            <select>
+                                            <select id="services" name="services">
                                                 <option value="services">Choose services</option>
-                                                <option value="services1">UPVC Windows</option>
-                                                <option value="services2">UPVC Doors</option>
-                                                <option value="services3">UPVC Partitions</option>
-                                                <option value="services4">Product Inquiry</option>
-                                                <option value="services5">Technical Support</option>
+                                                <option value="UPVC Windows">UPVC Windows</option>
+                                                <option value="UPVC Doors">UPVC Doors</option>
+                                                <option value="UPVC Partitions">UPVC Partitions</option>
+                                                <option value="Product Inquiry">Product Inquiry</option>
+                                                <option value="Technical Support">Technical Support</option>
                                             </select>
                                         </div>
                                     </fieldset>
@@ -503,5 +504,13 @@
        <script type="text/javascript" src="javascript/main.js"></script>
        <script type="text/javascript" src="javascript/wow.min.js"></script>
        <script type="text/javascript" src="javascript/animsition.js"></script>
+       <!-- Email JS Contact Form CDN Link-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                // emailjs.init("Account Public Key");
+                emailjs.init("");
+            })();
+        </script>
 </body>
 </html>

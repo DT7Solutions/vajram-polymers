@@ -351,54 +351,86 @@
     };
 
     var ajaxContactForm = function () {
-        if($("#commentform").length > 0) {
+        if ($("#commentform").length > 0) {
             $('#commentform').each(function () {
                 $(this).validate({
                     submitHandler: function (form) {
                         var $form = $(form),
-                            str = $form.serialize(),
                             loading = $('<div />', { 'class': 'loading' });
     
+                        var formData = {
+                            author: $('#author').val(),
+                            email: $('#email').val(),
+                            phone: $('#phone').val(),
+                            services: $('#services').val(),
+                            message: $('#comment-message').val()
+                        };
+    
                         $.ajax({
-                            type: "POST",
-                            url: $form.attr('action'),
-                            data: str,
                             beforeSend: function () {
                                 $form.find('.form-submit').append(loading);
                             },
-                            success: function (msg) {
-                                var result, cls;
-                                if (msg === 'Success') {
-                                    result = 'Message Sent Successfully To Email Administrator. ( You can change the email management a very easy way to get the message of customers in the user manual )';
-                                    cls = 'msg-success';
-                                } else {
-                                    result = 'Error sending email.';
-                                    cls = 'msg-error';
-                                }
+                            success: function () {
+                                // emailjs.send("Service_ID", "Template_ID", formData)  Email - ; Password: Dt7@2021
+                                // <p>Hello {{author}},</p>
+                                // <p>You got a new message from Win Door Fab:</p>
+                                // <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">
+                                //      Name : {{author}} <br>
+                                //      Email: {{email}} <br> 
+                                //      Message : {{message}} <br>
+                                //      Phone: {{phone}} <br> 
+                                //      Services: {{services}} <br>
+                                // </p>
+
+
+                                emailjs.send('', '', formData)
+                                    .then(function (response) {
+                                        var result, cls;
+                                        if (response.status === 200) {
+                                            result = 'Message Sent Successfully To Email Administrator.';
+                                            cls = 'msg-success';
+                                            console.log("Email sent successfully:" , formData)
+                                        } else {
+                                            result = 'Error sending email.';
+                                            cls = 'msg-error';
+                                        }
     
-                                $form.prepend(
-                                    $('<div />', {
-                                        'class': 'flat-alert ' + cls,
-                                        'text': result
-                                    }).append(
-                                        $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
-                                    )
-                                );
+                                        $form.prepend(
+                                            $('<div />', {
+                                                'class': 'flat-alert ' + cls,
+                                                'text': result
+                                            }).append(
+                                                $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
+                                            )
+                                        );
+
+                                        $form.find(':input').not('.submit').val('');
+                                    }, function (error) {
+                                        var result = 'Error sending email.';
+                                        var cls = 'msg-error';
     
-                                $form.find(':input').not('.submit').val('');
+                                        $form.prepend(
+                                            $('<div />', {
+                                                'class': 'flat-alert ' + cls,
+                                                'text': result
+                                            }).append(
+                                                $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
+                                            )
+                                        );
+                                    });
                             },
-                            complete: function (xhr, status, error_thrown) {
+                            complete: function () {
                                 $form.find('.loading').remove();
                             }
                         });
                     }
                 });
-            }); // each contactform
+            });
         }
-    };
+    };    
 
     var ajaxSubscribe = function () {
-        if($("#commentform").length > 0) {
+        if ($("#subscribe-form").length > 0) {
             var ajaxSubscribe = {
                 obj: {
                     subscribeEmail: $('#subscribe-email'),
@@ -409,78 +441,66 @@
                     success_message: '<div class="notification_ok">Thank you for joining our mailing list! Please check your email for a confirmation link.</div>',
                     failure_message: '<div class="notification_error">Error! <strong>There was a problem processing your submission.</strong></div>',
                     noticeError: '<div class="notification_error">{msg}</div>',
-                    noticeInfo: '<div class="notification_error">{msg}</div>',
-                    basicAction: 'mail/subscribe.php',
-                    mailChimpAction: 'mail/subscribe-mailchimp.php'
+                    noticeInfo: '<div class="notification_error">{msg}</div>'
                 },
-        
                 eventLoad: function () {
                     var objUse = ajaxSubscribe.obj;
-        
                     $(objUse.subscribeButton).on('click', function () {
                         if (window.ajaxCalling) return;
-                        var isMailchimp = objUse.dataMailchimp === 'true';
-        
-                        if (isMailchimp) {
-                            ajaxSubscribe.ajaxCall(objUse.mailChimpAction);
-                        } else {
-                            ajaxSubscribe.ajaxCall(objUse.basicAction);
-                        }
+                        ajaxSubscribe.ajaxCall();
                     });
                 },
-        
-                ajaxCall: function (action) {
+                ajaxCall: function () {
                     window.ajaxCalling = true;
                     var objUse = ajaxSubscribe.obj;
                     var messageDiv = objUse.subscribeMsg.html('').hide();
-                    $.ajax({
-                        url: action,
-                        type: 'POST',
-                        dataType: 'json',
-                        data: {
-                            subscribeEmail: objUse.subscribeEmail.val()
-                        },
-                        success: function (responseData, textStatus, jqXHR) {
-                            if (responseData.status) {
+                    var formData = {
+                        subscribeEmail: objUse.subscribeEmail.val()
+                    };
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_SUBSCRIBE_TEMPLATE_ID', formData)
+                        .then(function (response) {
+                            if (response.status === 200) {
                                 objUse.subscribeContent.fadeOut(500, function () {
                                     messageDiv.html(objUse.success_message).fadeIn(500);
                                 });
                             } else {
-                                switch (responseData.msg) {
-                                    case "email-required":
-                                        messageDiv.html(objUse.noticeError.replace('{msg}', 'Error! <strong>Email is required.</strong>'));
-                                        break;
-                                    case "email-err":
-                                        messageDiv.html(objUse.noticeError.replace('{msg}', 'Error! <strong>Email invalid.</strong>'));
-                                        break;
-                                    case "duplicate":
-                                        messageDiv.html(objUse.noticeError.replace('{msg}', 'Error! <strong>Email is duplicate.</strong>'));
-                                        break;
-                                    case "filewrite":
-                                        messageDiv.html(objUse.noticeInfo.replace('{msg}', 'Error! <strong>Mail list file is open.</strong>'));
-                                        break;
-                                    case "undefined":
-                                        messageDiv.html(objUse.noticeInfo.replace('{msg}', 'Error! <strong>undefined error.</strong>'));
-                                        break;
-                                    case "api-error":
-                                        objUse.subscribeContent.fadeOut(500, function () {
-                                            messageDiv.html(objUse.failure_message);
-                                        });
-                                }
-                                messageDiv.fadeIn(500);
+                                messageDiv.html(objUse.failure_message).fadeIn(500);
                             }
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            alert('Connection error');
-                        },
-                        complete: function (data) {
+                        }, function (error) {
+                            var errorMsg;
+                            switch (error.text) {
+                                case "email-required":
+                                    errorMsg = 'Error! <strong>Email is required.</strong>';
+                                    break;
+                                case "email-err":
+                                    errorMsg = 'Error! <strong>Email invalid.</strong>';
+                                    break;
+                                case "duplicate":
+                                    errorMsg = 'Error! <strong>Email is duplicate.</strong>';
+                                    break;
+                                case "filewrite":
+                                    errorMsg = 'Error! <strong>Mail list file is open.</strong>';
+                                    break;
+                                case "undefined":
+                                    errorMsg = 'Error! <strong>undefined error.</strong>';
+                                    break;
+                                default:
+                                    errorMsg = 'Error! <strong>API error.</strong>';
+                            }
+                            messageDiv.html(objUse.noticeError.replace('{msg}', errorMsg)).fadeIn(500);
+                        })
+                        .finally(function () {
                             window.ajaxCalling = false;
-                        }
-                    });
+                        });
                 }
             };
+            ajaxSubscribe.eventLoad();
         }
-    }
+    };
+    $(document).ready(function () {
+        ajaxContactForm();
+        ajaxSubscribe();
+    });    
 
 
     var alertBox = function () {

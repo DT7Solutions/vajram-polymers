@@ -494,6 +494,9 @@ video {
     border-radius: 5px;
     width: 100%;
 }
+.show-search {
+    margin-left: 25px;
+}
 .search-btn .btn-style-4:hover .btn-title {
   color: #599b47;
   border:1px solid #599b47 !important;
