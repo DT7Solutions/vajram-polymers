@@ -3,7 +3,7 @@
 const sliderItems = document.querySelectorAll(".slider__item");
 const slider = {
     currentItem: 0,
-    intervalTime: 8000,
+    intervalTime: 12000,
     autoPlayInterval: null,
     init: function() {
         this.in(this.currentItem);

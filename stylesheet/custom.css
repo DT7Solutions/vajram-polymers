@@ -375,10 +375,10 @@ video {
     height: 500px;
     position: relative;
     overflow: hidden;
-    background-image: url(../images/Slider/hero-slider-1920x755.png);
+    background-image: url(../images/Slider/hero-slider-1920x755-new.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
 }
 .slider__item {
     position: absolute;
@@ -388,7 +388,7 @@ video {
     justify-content: center;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    background-size: cover;
+    background-size: 100%;
     background-position: center center;
     transition: all 1s ease-in-out;
 }
@@ -398,8 +398,8 @@ video {
 .slider__text {
     text-align: center;
     color: #fff;
-    padding: 0 7.5%;
-    width: 75%;
+    padding: 0 15%;
+    width: 50%;
 }
 .slider__text .subtitle {
     font-size: 18px;
@@ -544,6 +544,9 @@ video {
 }
 .flat-tabs-type4 .featured-post .title a:hover {
     color: #ffffff;
+}
+.flat-tabs .image-profolio{
+    margin-top: 0px;
 }
 .custom .tp-bullet:hover,
 .custom .tp-bullet.selected {
@@ -921,7 +924,7 @@ video {
         color: #434e6e;
     }
     .slider {
-        height: 700px;
+        height: 500px;
     }
     .slider__text {
         width: 100%;
@@ -946,7 +949,7 @@ video {
 /* responsive code for Desktop */
 @media only screen and (min-width: 1020px) {
     .slider {
-        height: 650px;
+        height: 500px;
     }
     .slider__text .subtitle {
         font-size: 18px;
@@ -963,7 +966,7 @@ video {
     .slider__text .description {
         font-size: 18px;
         line-height: 20px;
-        margin: 1% 0%;
+        margin: 1% 15%;
     }
     .tf-blog-slider .align-items-center {
         display: flex;
@@ -980,6 +983,7 @@ video {
 @media only screen and (max-width: 992px) {
     .slider {
         height: 600px;
+        background-size: cover !important;
     }
     .slider__text {
         width: 100%;
