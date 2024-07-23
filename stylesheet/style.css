@@ -1903,10 +1903,6 @@ visibility: visible;
   align-items: center;
 }
 
- .top-content .email a{
-  margin-left: 26px;
-}
-
  .top-content a {
   color: white;
   text-decoration: none;
@@ -1926,10 +1922,6 @@ visibility: visible;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-
- .top-content .email {
-  margin-left: 29px;
 }
 
  .top-content .adress,

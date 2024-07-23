@@ -456,13 +456,16 @@ video {
 .top-bar-style2 .top-content li a:hover i::before {
     color: rgb(255, 255, 255) !important;
 }
+.top-bar-style2 .top-content{
+    gap: 20px;
+}
 .top-bar-style2 .top-content .adress i {
-    left: -18px;
-    top: 0;
+    left: -10%;
+    top: 5%;
 }
 .top-bar-style2 .top-content .email i {
-    left: -28px;
-    top: 0;
+    left: -20%;
+    top: 5%;
 }
 .top-bar-style2{
   background-color: #599b47;
@@ -634,6 +637,9 @@ video {
 .btn-style-5:hover .btn-title {
     color: #599b47 !important;
 }
+#footer .logo img {
+    border-radius: 12px;
+}
 #footer .topbar-socials a {
     color: #599b47;
     background-color: #ddebda;
@@ -675,7 +681,11 @@ video {
 }
 .footer-copyright{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+#botom .bottom-wrap #copyright {
+    margin-top: 0% !important;
+    margin-left: 0% !important;
 }
 .go-top {
     background-color: #599b47;
@@ -814,6 +824,12 @@ video {
     justify-content: center;
     margin-bottom: 2.5%;
 }
+.elementor-section-content-middle{
+    margin-top: 2.5%;
+}
+.elementor-section-content-middle p{
+    margin-bottom: 1%;
+}
 .content-inner .col-tab .row strong{
     color: #599b47;
 }
@@ -923,6 +939,9 @@ video {
 }
 /* responsive code for tablet */
 @media only screen and (max-width: 992px) {
+    .tabs-garallry .flat-tabs .menu-tab li{
+        margin-bottom: 5%;
+    }
     .slider {
         height: 600px;
         background-size: cover !important;
@@ -1022,6 +1041,8 @@ video {
 	}
     .top-bar-style2 .top-content {
 		margin-left: 2.5%;
+        gap: 0px;
+        text-align: center;
 	}
     .about2 .about-us{
         margin-top: 0%;
@@ -1031,12 +1052,15 @@ video {
 	}
     .footer-links{
         margin: 0%;
-        line-height: 40px;
+        line-height: 30px;
     }
     .footer-copyright{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    #botom .bottom-wrap #copyright{
+        margin: 0% 20% !important;
     }
     .go-top.show{
         right: 5%;
