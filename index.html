@@ -25,6 +25,11 @@
         <link href="images/Icon/Favicon.png" rel="apple-touch-icon-precomposed">
         <link href="images/Icon/Favicon.png" rel="apple-touch-icon-precomposed">
         <link href="images/Icon/Favicon.png" rel="shortcut icon">
+        <script>
+            if (window.location.pathname === '/index.html') {
+                window.location.replace('/');
+            }
+        </script>
 </head>
 <body class="counter-scroll header_sticky_style2">
     <div class="animsition boxed blog">
@@ -52,7 +57,7 @@
             <div class="container container-fixel">
               <div class="flex-header d-lg-flex">
                      <div class="logo logo-style2">
-                        <a href="index.html"> <img src="logo/logo.png"  data-retina="logo/logo.png" alt="images"></a>
+                        <a href="/"> <img src="logo/logo.png"  data-retina="logo/logo.png" alt="images"></a>
                      </div>
                      <div class="content-menu d-lg-flex">
                     <div class="nav-wrap">
@@ -62,7 +67,7 @@
                         <nav id="mainnav" class="mainnav fixed-mainnav">
                           <ul class="menu menustyle2">
                             <li class="current-menu current-menu-item current-menu-ancestor ">
-                                <a href="index.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
                             <li>
                                 <a href="about.html">About</a>
@@ -106,16 +111,16 @@
 
                       <div class="search-btn">        
                             <div class="btn-top">
-                                <a href="brochures-catalogue.html" class="themesflat-button-style2 btn-style-4">
-                                    <span class="btn-title">E-Catalogue</span>
+                                <a href="/" class="themesflat-button-style2 btn-style-4" onclick="downloadPdfCatlog()">
+                                    <span class="btn-title" id="download">E-Catalogue</span>
                                 </a>
                             </div>
                             <div class="flat-show-search">
                                 <div class="show-search">
-                                    <a href="#"><i class="fa fa-search"></i></a>                                             
+                                    <a href="/"><i class="fa fa-search"></i></a>                                             
                                 </div>
                                 <div class="top-search">                        
-                                    <form action="#" id="searchform-all" method="get">
+                                    <form action="/" id="searchform-all" method="get">
                                         <div>
                                             <input type="text" id="s" class="sss" placeholder="Search...">
                                             <input type="submit" value="" id="searchsubmit">
@@ -341,13 +346,13 @@
                 <div class="flat-tabs flat-tabs-type4">
                     <ul class="menu-tab">
                         <li class="active">
-                            <a href="#">Window Services</a>
+                            <a href="/">Window Services</a>
                         </li>
                         <li>
-                            <a href="#">Door Services</a>
+                            <a href="/">Door Services</a>
                         </li>
                         <li>
-                            <a href="#">Partition Services</a>
+                            <a href="/">Partition Services</a>
                         </li>
                     </ul>
                     <div class="content-tab">
@@ -468,16 +473,16 @@
                 <div class="flat-tabs flat-tabs-type2 flat-tabs-porpolio">
                     <ul class="menu-tab">
                         <li class="active">
-                            <a href="#">All Projects</a>
+                            <a href="/">All Projects</a>
                         </li>
                         <li>
-                            <a href="#">Windows</a>
+                            <a href="/">Windows</a>
                         </li>
                         <li>
-                            <a href="#">Doors</a>
+                            <a href="/">Doors</a>
                         </li>
                         <li>
-                            <a href="#">Partitions</a>
+                            <a href="/">Partitions</a>
                         </li>
                     </ul>
                     <div class="content-tab">
@@ -1109,12 +1114,12 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-3 no-padding-right clearfix">
                             <div class="logo clearfix">
-                                <a href="index.html">
-                                    <img src="logo/logo.png" alt="Vajram Polymers Logo" data-retina="logo/logo.png">
+                                <a href="/">
+                                    <img src="logo/logo.png" alt="windoorfab Logo" data-retina="logo/logo.png">
                                 </a>
                             </div>
                             <p>
-                                Vajram Polymers: Your trusted partner for UPVC windows, doors, and partitions in Andhra Pradesh.
+                                Windoorfab : Your trusted partner for UPVC windows, doors, and partitions in Andhra Pradesh.
                             </p>
                             <div class="topbar-socials">
                                 <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -1152,12 +1157,12 @@
                                     <div class="content-mail">
                                         <div class="text">
                                             <span>
-                                                <a href="mailto:contact@vajrampolymers.com">contact@vajrampolymers.com</a>
+                                                <a href="mailto:contact@windoorfab.com">contact@windoorfab.com</a>
                                             </span>
                                         </div>
                                         <div class="text">
                                             <span>
-                                                <a href="mailto:info@vajrampolymers.com">info@vajrampolymers.com</a>
+                                                <a href="mailto:info@windoorfab.com">info@windoorfab.com</a>
                                             </span>
                                         </div>
                                     </div>
@@ -1210,11 +1215,6 @@
                                             Contact
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="brochures-catalogue.html">
-                                            E-Catalogue
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1242,7 +1242,7 @@
                     <div class="bottom-wrap text-center">
                         <div id="copyright" class="footer-copyright">
                             <div class="footer-links">
-                                <span class="color-botom">All Rights Reserved | 2024</span> <a href="#"><span>© Vajram Polymers</span></a> 
+                                <span class="color-botom">All Rights Reserved | 2024</span> <a href="/"><span>© windoorfab</span></a> 
                             </div>
                             <div class="footer-links">
                                 <span class="color-botom">Crafted by</span> <a href="https://dt7.agency" target="_blank"><span>Dt7.agency</span></a> 
@@ -1254,7 +1254,7 @@
         </footer>
     </div> <!-- /.boxed -->
     <div class="button-go-top">
-        <a href="#" title="" class="go-top">
+        <a href="/" title="" class="go-top">
             <i class="fa fa-chevron-up"></i>
         </a>
     </div> <!-- /.go-top -->

@@ -542,49 +542,14 @@
 })(jQuery);
 
 
-/* BROCHURES-CATALOGUE PAGE*/
-var currentPage = 0;
-$('.book')
-.on('click', '.active', nextPage)
-.on('click', '.flipped', prevPage);
-$('.book').hammer().on("swipeleft", nextPage);
-$('.book').hammer().on("swiperight", prevPage);
-function prevPage() {
-    $('.flipped')
-        .last()
-        .removeClass('flipped')
-        .addClass('active')
-        .siblings('.page')
-        .removeClass('active')
-    $('.scene')
-        .addClass('right-set').css("left", "0px");
-    $('#scene').animate({
-        'margin-left': '50%'
-    });
-    if ($('section.page:nth-child(1)').hasClass('active') == true) {
-        $('#scene').animate({
-            'left': '0px',
-            'margin-left': '35%'
-        });
-    }
-}
-
-function nextPage() {
-    $('.active')
-        .removeClass('active')
-        .addClass('flipped')
-        .next('.page')
-        .addClass('active')
-        .siblings()
-    $('.scene')
-        .addClass('left-set').css("left", "0px");
-    $('#scene').animate({
-        'margin-left': '50%'
-    });
-    if ($('.right-set').hasClass('flipped') == true) {
-        $('#scene').animate({
-            'left': '0px',
-            'margin-left': '65%'
-        });
-    }
+/*DOWNLOAD E-CATALOGUE BROCHURES-CATALOGUE*/
+function downloadPdfCatlog() {
+    var pdfUrl = './win-door-fab-brochure.pdf';
+    window.open(pdfUrl, '_blank');
+    var link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'win-door-fab-brochure.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }
