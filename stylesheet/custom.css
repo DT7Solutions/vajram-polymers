@@ -287,6 +287,10 @@ video {
 .content-box span {
     font-family: "Poppins", "Roboto", sans-serif !important;
 }
+.testimonials .boxtestimonial{
+    min-height: 375px !important;
+    max-height: 400px !important;
+}
 .boxtestimonial .image-box {
     font-family: "Poppins", "Roboto", sans-serif !important;
 }
