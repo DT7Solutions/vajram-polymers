@@ -546,10 +546,10 @@
 function downloadPdfCatlog() {
     var pdfUrl = './win-door-fab-brochure.pdf';
     window.open(pdfUrl, '_blank');
-    var link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'win-door-fab-brochure.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // var link = document.createElement('a');
+    // link.href = pdfUrl;
+    // link.download = 'win-door-fab-brochure.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
 }
