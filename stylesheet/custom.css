@@ -757,7 +757,7 @@ video {
     color: #ffffff !important;
 }
 .page-title-content .blog-title a::after {
-    background-color: #599b47;
+    background-color: #434e6e;
 }
 .image-box-team .topbar-socials a,
 .image-box-team .topbar-socials .active,
@@ -766,6 +766,22 @@ video {
 }
 .icon-medal:before {
     color: #599b47 !important;
+}
+.about-style .about-us {
+    display: flex;
+    align-items: center;
+}
+.about-style .content-about .title-section {
+    margin-bottom: 2.5%;
+}
+.content-about-style2 {
+    padding-left: 0 !important;
+    margin-left: -8px;
+    margin-bottom: 5%;
+}
+.about-style .box-company {
+    padding: 14px 20px 13px 20px;
+    margin: -10% 5% 0%;
 }
 
 /* WINDOWS PAGE & DOORS PAGE & PARTITIONS PAGE */
@@ -886,6 +902,17 @@ video {
     display: flex;
     align-items: center;
 }
+
+.tf-contact-us .contact-us {
+    display: flex;
+    align-items: center;
+}
+.tf-contact-us .contact-us .contact-us-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 /* RESPOVSIVE VIEW */
