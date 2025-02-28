@@ -770,6 +770,7 @@ video {
 .about-style .about-us {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 .about-style .content-about .title-section {
     margin-bottom: 2.5%;
@@ -780,8 +781,7 @@ video {
     margin-bottom: 5%;
 }
 .about-style .box-company {
-    padding: 14px 20px 13px 20px;
-    margin: -10% 5% 0%;
+    display: none;
 }
 
 /* WINDOWS PAGE & DOORS PAGE & PARTITIONS PAGE */
@@ -895,6 +895,7 @@ video {
 .window-services-style .services {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .tf-newslatter .subscribe {
@@ -906,6 +907,8 @@ video {
 .tf-contact-us .contact-us {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .tf-contact-us .contact-us .contact-us-style {
     display: flex;
@@ -980,11 +983,18 @@ video {
 }
 /* responsive code for tablet */
 @media only screen and (max-width: 992px) {
+    .top-bar-style2 {
+        display: none;
+    }
+    .header-style2 .logo {
+        width: 100%;
+        padding: 14px 0 12px 2px;
+    }
     .tabs-garallry .flat-tabs .menu-tab li{
         margin-bottom: 5%;
     }
     .slider {
-        height: 600px;
+        height: 450px;
         background-size: cover !important;
     }
     .slider__text {
@@ -992,16 +1002,24 @@ video {
         padding: 0 5%;
     }
     .slider__text .subtitle {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 22px;
     }
     .slider__text .title {
-        font-size: 50px;
-        line-height: 52px;
+        font-size: 40px;
+        line-height: 44px;
     }
     .slider__text .description {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 22px;
+    }
+    .iconlist-about {
+        display: grid;
+        grid-template-columns: 48% 48%;
+        gap: 10px;
+	}
+    .btn-about {
+        margin-top: 2.5%;
     }
 	.iconlist-about li{
 		margin-bottom: 1% !important;
@@ -1011,7 +1029,8 @@ video {
 		margin-bottom: 5% !important;
 	}
     .about2 .about-us{
-        margin-top: 20%;
+        margin-top: 0%;
+        margin-left: 10%;
     }
     .what-we-do-style1 .col-sm-4{
 		width: 50% !important;
@@ -1023,7 +1042,21 @@ video {
         padding: 10% 0% !important;
     }
     .about-page{
-        margin-top: 15%;
+        margin-top: 7.5%;
+    }
+    .about-us .col-md-6 {
+        margin-bottom: 7.5% !important;
+    }
+    .about-style .about-us{
+        margin-top: 0%;
+        margin-left: 0%;
+    }
+    .about-style .btn-about {
+        bottom: -80px;
+    }
+    .iconlist-about li,
+    .icon-box li {
+        width: 100%;
     }
     .about-style .flat-tabs-about .menu-tab {
 		display: flex !important;
@@ -1048,27 +1081,52 @@ video {
         height: 60px;
     }
     .tf-newslatter .subscribe{
-		padding: 30px 30px 350px 30px;
-		z-index: 99;
+        flex-wrap: wrap;
 	}
+    .window-services-style .iconbox-service .icon-box li {
+        width: 48.3% !important;
+    }
+    .content-inner .col-tab .row {
+        align-items: normal !important;
+    }
+    .questions-style .image-form .image-hoverstyle2 .image img {
+        height: 100%;
+        max-height: 800px;
+    }
+    #footer .footer-widget .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .flat-tabs .image-profolio {
+        margin-bottom: 0px !important;
+    }
 }
 
 /* responsive code for mobile */
 @media only screen and (max-width: 576px) {
+    .header-style2 .logo {
+        padding: 0.5% 0;
+    }
+    .header-style2 .content-menu .nav-wrap {
+        height: 75px;
+    }
+    .slider {
+        height: 350px;
+    }
     .slider__text {
         width: 100%;
         padding: 0 5%;
     }
     .slider__text .subtitle {
         font-size: 14px;
-        line-height: 16px;
+        line-height: 18px;
     }
     .slider__text .title {
-        font-size: 42px;
-        line-height: 44px;
+        font-size: 32px;
+        line-height: 38px;
     }
     .slider__text .description {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 18px;
     }
     .what-we-do-style1 .col-sm-4{
@@ -1087,7 +1145,13 @@ video {
 	}
     .about2 .about-us{
         margin-top: 0%;
+        margin-left: 0%;
     }
+    .iconlist-about {
+        display: grid;
+        grid-template-columns: 98%;
+        gap: 10px;
+	}
     .carousel{
 		padding-top: 50px;
 	}
@@ -1138,7 +1202,33 @@ video {
     .footer-h2 {
 		margin-top: -40%;
 	}
-    
+    .window-services-style .iconbox-service .icon-box li {
+        width: 100% !important;
+        margin: 2.5%;
+        padding: 2.5%;
+    }
+    .window-services-style .iconbox-service .icon-box li::before {
+        padding: 7px 5px 5px 4px;
+    }
+    .flat-tabs-type4 .content-tab .case-tab {
+        margin: 2.5%;
+    }
+    .case-tab .featured-post {
+        padding: 20px 0;
+    }
+    .case-tab .featured-post .title a {
+        line-height: 26px;
+        font-size: 16px;
+    }
+    .page-title-content .blog-title h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .about-style .flat-tabs-about .menu-tab {
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 
