@@ -544,7 +544,7 @@
 
 /*DOWNLOAD E-CATALOGUE BROCHURES-CATALOGUE*/
 function downloadPdfCatlog() {
-    var pdfUrl = './win-door-fab-brochure.pdf';
+    var pdfUrl = './WinDoorFab-Broucher.pdf';
     window.open(pdfUrl, '_blank');
     // var link = document.createElement('a');
     // link.href = pdfUrl;
