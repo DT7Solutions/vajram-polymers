@@ -908,7 +908,8 @@ video {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+
+    /* gap: 10px; */
 }
 .tf-contact-us .contact-us .contact-us-style {
     display: flex;
@@ -1106,6 +1107,9 @@ video {
 @media only screen and (max-width: 576px) {
     .header-style2 .logo {
         padding: 0.5% 0;
+    }
+    .tf-contact-us .contact-us .contact-us-style {
+        margin-bottom:30px;
     }
     .header-style2 .content-menu .nav-wrap {
         height: 75px;
